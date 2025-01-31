@@ -101,9 +101,9 @@ const Registration = () => {
           </>
         ) : (
           <div className="text-center">
-            <h3 className="text-left text-2xl text-bold mb-10 ">
+            <h3 className="text-4xl font-semibold mb-10 ">
               {" "}
-              A verification email has been sent
+              Email Verification 
             </h3>
             <p className="text-gray-600 my-3"> Enter the OTP below:</p>
             <form id="otp-form" className="flex justify-center gap-3">
@@ -124,8 +124,9 @@ const Registration = () => {
                 />
               ))}
             </form>
-            <div className="flex justify-end my-5">
-              <Link href={"/"}>
+            <div className="flex justify-between items-center my-5">
+              <p className="link text-sm hover:text-green-500 font-normal text-zinc-500">email resend?</p>
+              <Link href={"/SetupOrganization"}>
                 <button
                   className="bg-white text-center w-40 rounded-2xl h-14 relative text-black  font-semibold group"
                   type="button"
