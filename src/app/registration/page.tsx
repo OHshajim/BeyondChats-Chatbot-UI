@@ -126,7 +126,7 @@ const Registration = () => {
                 />
               ))}
             </form>
-            <div className="flex justify-between items-center my-5">
+            <div className="flex sm:flex-row flex-col justify-between items-center my-5">
               <p className="link text-sm hover:text-green-500 font-normal text-zinc-500">
                 email resend?
               </p>

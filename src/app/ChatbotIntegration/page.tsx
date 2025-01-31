@@ -53,24 +53,24 @@ const ChatbotIntegration = () => {
         </Link>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-6 select-none">
+        <div className="flex sm:flex-row flex-col justify-between mt-6 select-none">
           <Link href={"/SetupOrganization"}>
             <button
-              className="bg-white text-center w-40 rounded-2xl h-14 relative text-black  font-semibold group"
+              className="bg-white text-center sm:w-40 w-full rounded-2xl h-14 relative text-black  font-semibold group"
               type="button"
             >
               <p className="translate-x-2">Back</p>
-              <div className="bg-zinc-300 rounded-xl h-12 w-1/4 flex items-center justify-center absolute right-1 top-[4px] group-hover:w-[162px] z-10 duration-500">
+              <div className="bg-zinc-300 rounded-xl h-12 w-1/4 flex items-center justify-center absolute right-1 top-[4px] sm:group-hover:w-[162px] group-hover:w-full z-10 duration-500">
                 <FaArrowLeftLong className="text-xl" />
               </div>
             </button>
           </Link>
           <Link href={"/ChatbotIntegration"}>
             <button
-              className="bg-white text-center w-40 rounded-2xl h-14 relative text-black  font-semibold group"
+              className="bg-white text-center sm:w-40 w-full rounded-2xl h-14 relative text-black  font-semibold group"
               type="button"
             >
-              <div className="bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute -left-3 top-[4px] group-hover:w-[180px] z-10 duration-500">
+              <div className="bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute -left-3 top-[4px] sm:group-hover:w-[162px] group-hover:w-full z-10 duration-500">
                 <FaArrowRightLong className="text-xl" />
               </div>
               <p className="translate-x-4">Skip & Continue</p>
