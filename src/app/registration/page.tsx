@@ -11,7 +11,7 @@ const Registration = () => {
   const [emailSent, setEmailSent] = useState(false);
   const { register, handleSubmit } = useForm();
   const [otp, setOtp] = useState(Array(4).fill(""));
-  const inputRefs = useRef([]);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -103,7 +103,7 @@ const Registration = () => {
           <div className="text-center">
             <h3 className="text-4xl font-semibold mb-10 ">
               {" "}
-              Email Verification 
+              Email Verification
             </h3>
             <p className="text-gray-600 my-3"> Enter the OTP below:</p>
             <form id="otp-form" className="flex justify-center gap-3">
@@ -116,7 +116,9 @@ const Registration = () => {
                   onChange={(e) => handleInput(e, index)}
                   onKeyDown={handleKeyDown}
                   onPaste={handlePaste}
-                  ref={(el) => (inputRefs.current[index] = el)}
+                  ref={(el) => {
+                    inputRefs.current[index] = el;
+                  }}
                   className="w-12 h-12 text-2xl font-semibold text-center border rounded-lg shadow-sm outline-none focus:border-green-400"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
@@ -125,7 +127,9 @@ const Registration = () => {
               ))}
             </form>
             <div className="flex justify-between items-center my-5">
-              <p className="link text-sm hover:text-green-500 font-normal text-zinc-500">email resend?</p>
+              <p className="link text-sm hover:text-green-500 font-normal text-zinc-500">
+                email resend?
+              </p>
               <Link href={"/SetupOrganization"}>
                 <button
                   className="bg-white text-center w-40 rounded-2xl h-14 relative text-black  font-semibold group"
